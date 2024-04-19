@@ -1,0 +1,741 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* style.css */
+
+.header-bg {
+    
+    background-color:transparent;
+    background-size: cover; /* Cubre todo el espacio disponible */
+    background-position: center; /* Centra la imagen */
+    
+}
+.ad-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000; /* Asegúrate de que esté por encima de todo lo demás */
+}
+
+.ad-image {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+button {
+    margin-top: 20px;
+}
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Cambia la opacidad según lo oscuro que quieras que sea */
+    z-index: 1; /* El z-index debe ser menor que el del contenido que quieres que sea visible encima del video */
+}
+
+.logo {
+    
+    top: 100px;
+    left:44%;
+    width: 120px;                    
+    height: auto;
+    
+}
+
+.logo_1 {
+    border-bottom: 1px solid #FFFFFF; /* Ajusta el color y el grosor de la línea como prefieras */
+    display: inline-block; /* O cualquier otro display que esté usando tu logo */
+    padding-bottom: 30px; 
+    position: absolute;
+    top: 50px;
+    width: 50px;
+
+}
+@layer {
+    body {
+        @apply text-black bg-red-50 tracking-wider font-playfair-display font-bold;
+    }
+}
+/* Añade esta regla para la clase 'hidden' */
+.hidden {
+    display: none;
+}
+
+/* CSS */
+
+/* Estilos para pantallas con ancho mayor o igual a 768px (tablets, laptops, desktops) */
+@media (min-width: 900px) {
+    #top_menu {
+        display: flex !important;
+        margin-right: 1.25rem !important; /* Ajusta según sea necesario */
+    }
+    #nav-menu {        
+        display: flex ; /* Mostramos el menú completo */
+        position: static; /* Posicionamos el menú en la parte superior derecha */
+        
+    }
+    #hamburger {
+        display: none; /* Ocultamos el menú hamburguesa */                       
+        
+    
+    }
+}
+
+/* Cambia el color de los íconos a blanco */
+.ri-moon-line,
+.ri-menu-2-line {
+    color: #CCC; /* O usa un gris claro como #CCC */
+}
+
+/* Si deseas que los íconos cambien de color al pasar el mouse (hover), puedes añadir */
+.ri-moon-line:hover,
+.ri-menu-2-line:hover {
+    color: #CCC; /* Color gris claro para el hover */
+}
+
+#nav-menu {        
+    transform: scale(0);
+    transform-origin: top right;
+    
+    border-top: 10px solid black; /* Añade una línea negra en la parte superior */
+    
+    padding-top: 120px; 
+    background-color: rgba(0, 0, 0, 0.98);
+    border: 2px solid black; /* Agrega un borde negro de 2px */
+    border-radius: 10px; /* Agrega bordes redondeados de 10px */
+    display: none;
+    z-index: 200; /* Asegúrate de que sea mayor que otros elementos */
+    transition: transform 0.5s ease-in-out; /* Suaviza la transición */
+} 
+/* Al abrir el menú, ajustamos 'right' a 0 */
+#nav-menu.active {
+    transform: scale(1);
+    
+}
+/* Cambia el color del texto de los enlaces a blanco */
+.nav_link {
+    display: inline-block; /* Hace que el enlace llene el ancho del contenedor para un mejor efecto de hover */
+    padding: 1px 10; /* Añade algo de relleno para hacer cada opción más grande */
+    color: white; /* Establece el color del texto */    
+    transition: border-bottom 0.3s;
+}
+
+/* Cambia el color del texto al pasar el mouse sobre los enlaces a gris claro, si así lo deseas */
+.nav_link:hover {
+    border-bottom: 2px solid white;
+    color: #ccc; /* Color gris claro para el hover */
+}
+
+/* Si quieres que el ícono de cierre también sea blanco o gris al pasar el mouse */
+#nav-close .ri-close-line,
+#nav-close .ri-close-line:hover {
+    color: white; /* Color blanco para el ícono de cierre */
+    /* Añade :hover si deseas un color diferente al pasar el mouse */
+}
+/* Estilos del video */
+
+.video-container {
+    position: fixed; /* Posición fija para que el video de fondo */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Asegura que el video se muestre detrás del contenido */
+}
+
+#myVideo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+main {
+    padding-top: 290px; /* Ajusta este valor según la altura real de tu header */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 1600px) {
+    .header-scrolled {
+        background-color: rgba(0, 0, 0, 0.95); /* Color de fondo oscuro cuando se hace scroll */
+        transition: background-color 1.2s; /* Transición suave del cambio de color */
+    }
+    .icono {
+        width: 28px;  /* Ajusta este valor según tus necesidades */
+        height: auto;
+        margin-right: 35px
+    }
+    .logo {
+        position:absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: auto;
+        
+        
+    }
+    .main {
+        padding-top: 290px; /* O el valor que se ajuste a la altura del logo */
+    }
+    .nav_link {
+        display: block; /* Asegúrate de que cada enlace sea un bloque para permitir el subrayado en toda la anchura */
+        color: white; /* Color inicial del texto */
+        transition: color 0.3s; /* Suaviza la transición del color */
+        position: relative; /* Posición relativa para el pseudo-elemento after */
+    }
+
+    .nav_link::after {
+        content: '';
+        display: block; /* Asegúrate de que el pseudo-elemento sea un bloque */
+        height: 0.1px; /* Altura de la línea de subrayado */
+        width: 0; /* Inicia sin ancho */
+        background: white; /* Color de la línea de subrayado */
+        transition: width 0.3s; /* Suaviza la transición del ancho */
+        position: absolute; /* Posicionamiento absoluto respecto al enlace */
+        bottom: 0; /* Posición al final del enlace */
+        left: 0; /* Alinea a la izquierda */
+    }
+
+    .nav_link:hover::after {
+        width: 100%; /* El ancho total del enlace al pasar el cursor */
+    }
+
+    .nav_link:hover {
+        color: #ccc; /* Cambia el color del texto al pasar el cursor, si lo deseas */
+    }
+    .container_1 {
+        min-height: 100px;
+        padding-left: 1rem; /* Ajusta este valor como sea necesario */
+        padding-right: 1rem; /* Ajusta este valor como sea necesario */
+        gap: 20px;
+        margin-bottom: 1rem; /* Espacio reducido en móviles */
+    }
+    .main-content {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.95); /* Semi-transparente para ver el video */
+        border-radius: 20px; /* Bordes redondeados */        
+        width: calc(100% - 40px); /* Ajuste el ancho para crear espacio en los lados */
+        margin: 20px auto; /* Espacio superior e inferior y centrado horizontal */
+        padding: 1rem; /* Relleno interior */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+        z-index: 10; /* Encima del video de fondo */
+        overflow: hidden; /* Ocultar desbordamiento para mantener los bordes redondeados */
+    }
+
+    .section {
+        margin: 1rem; /* Margen para el contenido dentro del área principal */
+    }
+    #Menu {
+        scroll-margin-top: 80px; /* Ajusta esto al tamaño de tu menú fijo o encabezado */
+    }
+    #category {
+        padding-left: 0.5%;
+    }
+    
+    
+}
+
+/* Estilos de las categorias */
+#category {
+    margin-top: 105px;
+    padding:1.25rem; /* Ajusta esto según tus necesidades */
+    margin-bottom: 220px;
+    padding-left: 0.8%;
+    border-color:transparent;
+    border-width: 12px; /*Ajusta esto según el grosor deseado del borde */
+    border-image-slice: 160; /* Ajusta este valor según la imagen */
+    border-image-repeat: repeat; /* Prueba con diferentes valores */    
+}
+.container_1 {      
+    margin-top:2rem;  
+    position:relativa;
+    scroll-snap-type: x mandatory;
+    box-sizing: border-box;    
+    width:calc(100% - -11px);
+    display: flex;
+    align-items: center; /* Centra las tarjetas verticalmente */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 10px;
+    justify-content: flex-start; /* Alinear tarjetas al inicio del contenedor */
+
+}
+/* Estiliza la barra de desplazamiento en su totalidad */
+.container_1::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+    height: 12px; /* Altura de la barra de desplazamiento para desplazamiento horizontal */
+}
+
+/* Estiliza la pista de la barra de desplazamiento */
+.container_1::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Color de fondo de la pista */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estiliza el pulgar de la barra de desplazamiento (la parte que se mueve) */
+.container_1::-webkit-scrollbar-thumb {
+    background: darkgray; /* Color de fondo del pulgar */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 3px solid transparent; /* Crea bordes transparentes para el pulgar */
+    background-clip: content-box; /* Asegura que el color de fondo solo se aplique dentro de los bordes */
+}
+
+/* Estiliza el pulgar de la barra de desplazamiento al pasar el ratón por encima */
+.container_1::-webkit-scrollbar-thumb:hover {
+    background: gray; /* Color de fondo del pulgar al pasar el ratón por encima */
+}
+
+.text-above-cards {
+    margin-top: -100px;
+    position: relative; /* o 'absolute' dependiendo de tu diseño específico */
+    z-index: 10; /* Asegúrate de que tenga un z-index mayor que tus tarjetas para que se muestre encima */
+    color: #333; /* El color del texto */
+    background: transparent; /* El fondo, si lo necesitas */
+    margin-bottom: 10px; /* Espacio entre el texto y las tarjetas */
+}
+.text-above-cards h2 {
+    border-bottom: 2px solid #333; /* Ajusta el color y el grosor a tu gusto */
+    display: inline-block; /* Esto asegura que la línea solo ocupe el ancho del texto */
+    padding-bottom: 5px; /* Ajusta para espacio entre el texto y la línea */
+}
+
+
+/* Estilo para la tarjeta */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.card {
+    position:relative;
+    display: flex;
+    cursor: pointer;
+    background-color: #3490dc; /* Azul */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el contenido que se desborde */
+    width: calc(33vw - 22px);
+    height: 90px; /* Altura fija para la tarjeta */  
+    flex: 0 0 auto; /* No se ajusta al tamaño del contenedor */  
+    flex-shrink: 0;
+    margin-top: 1rem;
+    scroll-snap-align: start;
+}
+
+/* Estilo para la imagen */
+.card img {
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    height: 100%; /* Ocupa la mitad de la altura de la tarjeta */
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin deformarse */
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%; /* Ajusta esto según la cantidad de difuminado que desees */
+    background: rgba(0, 0, 0, 0.5);  /* Difuminado negro */
+    z-index: 2;
+}
+.content {
+    top: 52px;
+    position: absolute;
+    left:50%;    
+    z-index: 3;
+    /* Resto de tus estilos */
+}
+/* Estilo para el contenido de texto */
+.card .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%; /* Ajusta esto según la altura del overlay */
+    z-index: 3;
+    color: white; /* Ajusta el color del texto según necesites */
+}
+.card-container {    
+    display: flex;
+    gap: 10px; /* Asegúrate de que el gap sea el mismo que el que tenías antes */
+    padding: 0 10%; /*   Ajusta el valor del padding según tus necesidades */
+}
+
+/* Sección de despliegue del menú */
+.menu-container {
+    display: none; /* Usamos flex para alinear items en fila */
+    flex-wrap: wrap; /* Permite que los items pasen a la siguiente línea si no caben */
+    justify-content: flex-start; /* Alinea los items al inicio */
+    align-items: stretch; /* Estira los items para que tengan la misma altura */
+    margin-top:6rem;        
+
+}    
+.menu-item {        
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between; /* Espacio entre el contenido de texto e imagen */
+    width: 82%; /* Ancho completo del contenedor padre */
+    height: auto; /* Alto automático basado en el contenido */
+    border-radius: 10px;
+    transform: translateX(102px);  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 19px;
+}
+.menu-container .section-title {
+    width: 100%; /* Asegura que el contenedor del título use todo el ancho disponible */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-left: auto; /* Establece los márgenes izquierdo y derecho en 'auto' para centrar el contenedor */
+    margin-right: auto;
+    margin-top: -45px;
+    margin-bottom: 30px; /* Nuevo margen inferior para bajar los ítems del menú */
+}
+.item-info {
+    flex: 1;
+}
+.item-title {
+    margin-top:5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.item-description {
+    margin-bottom: 2px;
+    color: #4a4a4a;
+}
+
+.item-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item-image-container {
+    position: relative;
+    margin-left: 8px;
+}
+
+.item-image {
+    display: block;
+    max-width: 120px; /* Adjust as necessary */
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-container .section-title {
+    width: 100%; /* Asegura que el contenedor del título use todo el ancho disponible */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-left: auto; /* Establece los márgenes izquierdo y derecho en 'auto' para centrar el contenedor */
+    margin-right: auto;
+    margin-top:-75px;
+}
+
+.menu-container .section-title h2 {
+    font-size: 1.5rem; /* Tamaño de fuente para pantallas pequeñas */
+    font-weight: bold; /* Hace que el texto del título sea en negrita */
+}
+
+.section-title h2 {
+    border-bottom: 2px solid #000; /* Establece el color y el grosor de la línea */
+    display: inline-block; /* Asegura que la línea sea solo tan ancha como el texto */
+    padding-bottom: 1px; /* Espacio entre el texto y la línea */
+    margin-bottom: 25px; /* Espacio adicional debajo de la línea si es necesario */
+}
+/* Media queries para ajustar el tamaño del título en pantallas más grandes */
+@media (min-width: 640px) { /* sm: 640px */
+    .menu-container .section-title {
+        margin-top:10px; /* Ajusta para pantallas medianas si es necesario */
+    }
+    .menu-container .section-title h2 {
+    font-size: 2rem;
+    }
+}
+    
+@media (min-width: 768px) { /* md: 768px */
+    .menu-container .section-title {
+        margin-top: 10px; /* Ajusta para pantallas medianas si es necesario */
+    }
+        .menu-container .section-title h2 {
+        font-size: 2.5rem;
+    }
+    
+}
+    
+@media (min-width: 1024px) { /* lg: 1024px */
+    .menu-container .section-title {
+        margin-top: -55px; /* Mantiene el título cerca de las tarjetas para pantallas grandes */
+    }
+    .menu-container .section-title h2 {
+    font-size: 3rem;
+    }    
+}
+    
+@media (min-width: 1280px) { /* xl: 1280px */
+    
+    .menu-container .section-title h2 {
+    font-size: 3.5rem;
+    }
+    .menu-container {
+        display: none; /* Usamos flex para alinear items en fila */
+        flex-wrap: wrap; /* Permite que los items pasen a la siguiente línea si no caben */
+        justify-content: flex-start; /* Alinea los items al inicio */
+        align-items: stretch; /* Estira los items para que tengan la misma altura */
+        margin-top:6rem;        
+        transform: translateX(110px);    
+    }    
+    .menu-item {        
+        margin:10px;        
+        align-items: center;
+        background-color: #fff;
+        justify-content: space-between; /* Espacio entre el contenido de texto e imagen */
+        width: 82%; /* Ancho completo del contenedor padre */
+        height: auto; /* Alto automático basado en el contenido */
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+    }
+    .menu-container .section-title {
+        width: 100%; /* Asegura que el contenedor del título use todo el ancho disponible */
+        text-align: center; /* Centra el texto horizontalmente */
+        margin-left: auto; /* Establece los márgenes izquierdo y derecho en 'auto' para centrar el contenedor */
+        margin-right: auto;
+        margin-top: -65px;
+        margin-bottom: 55px; /* Nuevo margen inferior para bajar los ítems del menú */
+    }
+}
+@media (min-width: 430px) {  
+    .scroll-arrow {
+        position: relative;
+        top:196px ;
+        transform: translateY(-50%);
+        cursor: pointer;
+        
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    
+    .left-arrow {
+        left: -3px;
+    }
+    
+    .right-arrow {
+        right: -1px;
+    }
+    .menu-container {
+        
+        display: none; /* Usamos flex para alinear items en fila */
+        flex-wrap: wrap; /* Permite que los items pasen a la siguiente línea si no caben */
+        justify-content: flex-start; /* Alinea los items al inicio */
+        align-items: stretch; /* Estira los items para que tengan la misma altura */
+        margin-top:6rem;        
+        transform: translateX(-1px);    
+    }    
+    .menu-item { 
+        margin-top:18px;
+        align-items: center;
+        background-color: #fff;
+        justify-content: space-between; /* Espacio entre el contenido de texto e imagen */
+        width: 82%; /* Ancho completo del contenedor padre */
+        height: auto; /* Alto automático basado en el contenido */
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    .menu-container {
+        display:none;
+        flex-direction: column;
+        align-items: center; /* Centrar los items horizontalmente */
+        width: 105%; /* Ajustar al ancho de la pantalla */
+        
+    }
+    
+    .menu-item {
+        box-sizing: border-box; /* Asegurar que padding y border estén incluidos en el ancho total */
+        width: 100%; /* Para que ocupe el ancho total del contenedor */
+        max-width: 500px; /* Un máximo de 300px de ancho */
+        margin: 0.5rem auto; /* Margen superior e inferior y centrado horizontal */
+        padding: 1rem; /* Espacio interno */
+        transform: translateX(1px);
+        
+    }
+    
+    .item-title, .item-description, .item-price {
+        font-size: 0.875rem; /* Reduce el tamaño del texto */
+    }
+    
+    .item-image-container {
+        width: 100px; /* Reducir el tamaño del contenedor de la imagen si es necesario */
+        height: auto; /* Ajustar la altura automáticamente */
+    }
+    
+    .item-image {
+        max-width: 100%; /* Para que la imagen sea responsive y no exceda el tamaño de su contenedor */
+        height: auto; /* Ajustar la altura automáticamente */
+        object-fit: cover; /* Asegurar que la imagen cubra el área sin perder su aspecto */
+    }
+    
+    .add-button {
+        width: 30px; /* Ajustar el tamaño del botón si es necesario */
+        height: 30px; /* Ajustar el tamaño del botón si es necesario */
+        font-size: 0.75rem; /* Ajustar el tamaño del texto del botón si es necesario */
+    }
+    .menu-container .section-title {
+        width: 100%; /* Asegura que el contenedor del título use todo el ancho disponible */
+        text-align: center; /* Centra el texto horizontalmente */
+        margin-left: auto; /* Establece los márgenes izquierdo y derecho en 'auto' para centrar el contenedor */
+        margin-right: auto;
+        margin-top:-75px;
+    }
+    
+    .menu-container .section-title h2 {
+        font-size: 1.5rem; /* Tamaño de fuente para pantallas pequeñas */
+        font-weight: bold; /* Hace que el texto del título sea en negrita */
+    }
+    
+}
+@media (max-width: 320px){
+    #nav-menu {                
+        z-index: 20; /* Asegúrate de que sea mayor que otros elementos */
+    }
+    .scroll-arrow {
+        position: relative;
+        top:208px ;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 40;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .left-arrow {
+        position: absolute;
+        left: -5px;
+    }
+    
+    .right-arrow {
+        right: -1px;
+        
+    }
+    .menu-container {
+        top:10px;
+        display: none;
+        flex-direction: column;
+        align-items: center; /* Centrar los items horizontalmente */
+        width: 112%; /* Ajustar al ancho de la pantalla */
+        transform: translateX(2px);
+    }
+    
+    .menu-item {
+        box-sizing: border-box; /* Asegurar que padding y border estén incluidos en el ancho total */
+        width: 100%; /* Para que ocupe el ancho total del contenedor */
+        transform: translateX(-3px);
+        margin: 0.5rem auto; /* Margen superior e inferior y centrado horizontal */
+        padding: 1rem; /* Espacio interno */
+    }
+    
+    .item-title, .item-description, .item-price {
+        font-size: 0.7rem; /* Reduce el tamaño del texto */
+    }
+    
+    .item-image-container {
+        width: 100px; /* Reducir el tamaño del contenedor de la imagen si es necesario */
+        height: auto; /* Ajustar la altura automáticamente */
+    }
+    
+    .item-image {
+        max-width: 100%; /* Para que la imagen sea responsive y no exceda el tamaño de su contenedor */
+        height: auto; /* Ajustar la altura automáticamente */
+        object-fit: cover; /* Asegurar que la imagen cubra el área sin perder su aspecto */
+    }    
+
+}
+@media(min-width: 320px){    
+    #nav-menu {                
+        z-index: 200; /* Asegúrate de que sea mayor que otros elementos */
+    }
+    
+    .scroll-arrow {
+        position: absolute;        
+        transform: translateY(-50%);
+        cursor: pointer;
+        
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .left-arrow {
+        
+        left: 15px;
+    }
+    
+    .right-arrow {
+        right: 15px;        
+    }
+    
+}
+@media(min-width: 375px){
+    .scroll-arrow {
+        position: absolute;  
+        top:197px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .left-arrow {
+        
+        left: 15px;
+    }
+    
+    .right-arrow {
+        right: 15px;        
+    }
+    
+}
+@media(min-width: 360px){
+    #hamburger {                
+        z-index: 100; /* Asegúrate de que sea mayor que otros elementos */
+    
+    }
+    .scroll-arrow {
+        position: absolute;  
+        top:207px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 40;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .left-arrow {
+        
+        left: 15px;
+    }
+    
+    .right-arrow {
+        right: 15px;        
+    }
+    
+}
