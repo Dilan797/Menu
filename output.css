@@ -738,7 +738,7 @@ video {
   }
 }
 
-.hover\:text-yellow-100:hover {
+/* .hover\:text-yellow-100:hover {
   --tw-text-opacity: 1;
   color: rgb(254 249 195 / var(--tw-text-opacity));
 }
@@ -751,7 +751,7 @@ video {
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
-}
+} */
 
 .hover\:text-gray-400:hover {
   --tw-text-opacity: 1;
