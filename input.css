@@ -60,8 +60,8 @@ button {
     position: absolute;
     top: 50px;
     width: 50px;
-
 }
+
 @layer {
     body {
         @apply text-black bg-red-50 tracking-wider font-playfair-display font-bold;
@@ -72,6 +72,12 @@ button {
     display: none;
 }
 
+
+/* Añadir la fuente Josefin Sans */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    text-black bg-red-50 tracking-wider font-bold;
+}
 /* CSS */
 
 /* Estilos para pantallas con ancho mayor o igual a 768px (tablets, laptops, desktops) */
@@ -129,8 +135,16 @@ button {
     padding: 1px 10; /* Añade algo de relleno para hacer cada opción más grande */
     color: white; /* Establece el color del texto */    
     transition: border-bottom 0.3s;
+    font-family: 'Josefin Sans', sans-serif; /* Aplicar la fuente */
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    font-weight: 300; /* Grosor de la fuente */
 }
-
+.nav_link::first-letter {
+    font-size: 1.4rem; /* Tamaño de la primera letra */
+    font-weight: 100; /* Grosor de la primera letra */
+}
 /* Cambia el color del texto al pasar el mouse sobre los enlaces a gris claro, si así lo deseas */
 .nav_link:hover {
     border-bottom: 2px solid white;
@@ -261,7 +275,7 @@ main {
     border-image-repeat: repeat; /* Prueba con diferentes valores */    
 }
 .container_1 {      
-    margin-top:2rem;  
+    margin-top:1.5rem;  
     position:relativa;
     scroll-snap-type: x mandatory;
     box-sizing: border-box;    
@@ -306,14 +320,31 @@ main {
     z-index: 10; /* Asegúrate de que tenga un z-index mayor que tus tarjetas para que se muestre encima */
     color: #333; /* El color del texto */
     background: transparent; /* El fondo, si lo necesitas */
+    
     margin-bottom: 10px; /* Espacio entre el texto y las tarjetas */
 }
 .text-above-cards h2 {
     border-bottom: 2px solid #333; /* Ajusta el color y el grosor a tu gusto */
     display: inline-block; /* Esto asegura que la línea solo ocupe el ancho del texto */
     padding-bottom: 5px; /* Ajusta para espacio entre el texto y la línea */
+    font-family: 'Josefin Sans', sans-serif; /* Aplicar la fuente */
+    font-size: 1.5rem; /* Ajustar tamaño */
+    letter-spacing: -0.08em;
+    font-weight: 400; /* Ajustar grosor */
 }
-
+.text-above-cards h2::first-letter {
+    font-size: 2rem; /* Ajustar tamaño de la primera letra */
+    font-weight: 100; /* Ajustar grosor de la primera letra */
+}
+.first-letter {
+    font-size: 2rem; /* Ajustar tamaño de la primera letra */
+    font-weight: 100; /* Ajustar grosor de la primera letra */
+}
+.lower-text{
+    margin-top: 10px; /* Ajustar espacio superior para bajar el texto */
+    letter-spacing: 0.1em; /* Ajustar espaciado de letras */
+    font-size: 1rem; /* Ajustar tamaño de fuente si es necesario */
+}
 
 /* Estilo para la tarjeta */
 .swiper {
@@ -455,6 +486,29 @@ main {
     padding-bottom: 1px; /* Espacio entre el texto y la línea */
     margin-bottom: 25px; /* Espacio adicional debajo de la línea si es necesario */
 }
+.relative {
+    position: relative; /* Asegura que el contenedor padre tenga posición relativa */
+    display: flex; /* Utiliza flexbox para alinear contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+.scroll-arrow {
+    position: absolute; /* Posiciona las flechas absolutamente dentro del contenedor relativo */
+    top: 200px; /* Centra verticalmente en el contenedor */
+    transform: translateY(-50%); /* Ajusta para centrar exactamente en el medio */
+    z-index: 50; /* Asegura que las flechas estén por encima de otros contenidos */
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.left-arrow {
+    left: 15px; /* Ajusta la posición izquierda */
+}
+
+.right-arrow {
+    right: 15px; /* Ajusta la posición derecha */
+}
 /* Media queries para ajustar el tamaño del título en pantallas más grandes */
 @media (min-width: 640px) { /* sm: 640px */
     .menu-container .section-title {
@@ -520,7 +574,7 @@ main {
 @media (min-width: 430px) {  
     .scroll-arrow {
         position: relative;
-        top:196px ;
+        top:205px ;
         transform: translateY(-50%);
         cursor: pointer;
         
@@ -619,7 +673,7 @@ main {
     }
     .scroll-arrow {
         position: relative;
-        top:208px ;
+        top:235px;
         transform: translateY(-50%);
         cursor: pointer;
         z-index: 40;
@@ -678,7 +732,7 @@ main {
         position: absolute;        
         transform: translateY(-50%);
         cursor: pointer;
-        
+        top:235px;
         background-color: transparent;
         padding: 10px;
         border-radius: 50%;
@@ -696,7 +750,7 @@ main {
 @media(min-width: 375px){
     .scroll-arrow {
         position: absolute;  
-        top:197px;
+        top:235px;
         transform: translateY(-50%);
         cursor: pointer;
         
@@ -721,7 +775,7 @@ main {
     }
     .scroll-arrow {
         position: absolute;  
-        top:207px;
+        top:235px;
         transform: translateY(-50%);
         cursor: pointer;
         z-index: 40;
