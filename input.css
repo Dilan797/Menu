@@ -336,7 +336,7 @@ main {
     font-size: 2rem; /* Ajustar tamaño de la primera letra */
     font-weight: 100; /* Ajustar grosor de la primera letra */
 }
-.first-letter {
+.first-letter-1 {
     font-size: 2rem; /* Ajustar tamaño de la primera letra */
     font-weight: 100; /* Ajustar grosor de la primera letra */
 }
@@ -382,11 +382,18 @@ main {
     z-index: 2;
 }
 .content {
-    top: 52px;
+    top: 55px;
     position: absolute;
-    left:50%;    
-    z-index: 3;
+    font-family: 'Josefin Sans', sans-serif; /* Aplicar la fuente */
+    left:50%;        
+    font-size: .8rem; /* Tamaño de fuente ajustado */
+    font-weight: 100;
+    letter-spacing: 0em;
     /* Resto de tus estilos */
+}
+.content::first-letter {
+    font-size: 1.4rem; /* Tamaño de la primera letra */
+    font-weight: 100; /* Grosor de la primera letra */
 }
 /* Estilo para el contenido de texto */
 .card .content {
@@ -448,6 +455,12 @@ main {
 .item-description {
     margin-bottom: 2px;
     color: #4a4a4a;
+    margin: 10px 0; /* Margen entre líneas y descripción */
+}
+.horizontal-lines {
+    border-top: 1px solid #000; /* Línea superior */
+    border-bottom: 1px solid #000; /* Línea inferior */
+    padding: 10px 0; /* Espaciado interior */
 }
 
 .item-price {
@@ -456,6 +469,7 @@ main {
 }
 
 .item-image-container {
+    top:9px;
     position: relative;
     margin-left: 8px;
 }
@@ -481,10 +495,17 @@ main {
 }
 
 .section-title h2 {
+    margin-top:13px;
     border-bottom: 2px solid #000; /* Establece el color y el grosor de la línea */
     display: inline-block; /* Asegura que la línea sea solo tan ancha como el texto */
     padding-bottom: 1px; /* Espacio entre el texto y la línea */
+    letter-spacing: 0em;
     margin-bottom: 25px; /* Espacio adicional debajo de la línea si es necesario */
+}
+.first-letter-2 {
+    font-size: 4.3rem; /* Tamaño de la primera letra */
+    font-weight: 700; /* Grosor de la primera letra */
+    
 }
 .relative {
     position: relative; /* Asegura que el contenedor padre tenga posición relativa */
@@ -517,6 +538,13 @@ main {
     .menu-container .section-title h2 {
     font-size: 2rem;
     }
+    .section-title h2 {
+        font-size: 2rem; /* Tamaño general del texto en pantallas medianas y grandes */
+    }
+
+    .first-letter {
+        font-size: 2.5rem; /* Tamaño de la primera letra en pantallas medianas y grandes */
+    }
 }
     
 @media (min-width: 768px) { /* md: 768px */
@@ -525,8 +553,7 @@ main {
     }
         .menu-container .section-title h2 {
         font-size: 2.5rem;
-    }
-    
+    }    
 }
     
 @media (min-width: 1024px) { /* lg: 1024px */
@@ -535,7 +562,8 @@ main {
     }
     .menu-container .section-title h2 {
     font-size: 3rem;
-    }    
+    }
+    
 }
     
 @media (min-width: 1280px) { /* xl: 1280px */
@@ -665,7 +693,19 @@ main {
         font-size: 1.5rem; /* Tamaño de fuente para pantallas pequeñas */
         font-weight: bold; /* Hace que el texto del título sea en negrita */
     }
-    
+    .section-title h2 {
+        margin-top:13px;
+        border-bottom: 2px solid #000; /* Establece el color y el grosor de la línea */
+        display: inline-block; /* Asegura que la línea sea solo tan ancha como el texto */
+        padding-bottom: 1px; /* Espacio entre el texto y la línea */
+        letter-spacing: 0em;
+        margin-bottom: 25px; /* Espacio adicional debajo de la línea si es necesario */
+    }
+    .first-letter-2 {
+        font-size: 1.9rem; /* Tamaño de la primera letra */
+        font-weight: 700; /* Grosor de la primera letra */
+        
+    }
 }
 @media (max-width: 320px){
     #nav-menu {                
