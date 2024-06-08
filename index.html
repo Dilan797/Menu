@@ -27,8 +27,12 @@
         <body>
             <!-- Imagen publicitaria -->
             <div id="ad" class="ad-container">
-                <img src="img/carne.jpg" alt="Publicidad" class="ad-image">
-                <button onclick="closeAd()">Cerrar</button> 
+                <div class="ad-image-container">
+                    <img src="img/carne.jpg" alt="Publicidad" class="ad-image">
+                    <button class="close-btn" onclick="closeAd()">
+                        <img src="/img/cerrar.png" alt="Cerrar">
+                    </button>
+                </div>
             </div>
             <div >
                 <a href="#" class="text-2xl uppercase">
@@ -82,7 +86,14 @@
                             </ul>
                             
                             <div class="flex items-center gap-5">
-                                <i class="ri-moon-line cursor-pointer ml-4 "></i>
+                                <div class="container-3">
+                                    <!-- Botón de reproducción -->
+                                    <button id="playButton" class="play-button">
+                                        <img id="playIcon" src="/img/jugar.png" alt="Play" class="icon">
+                                    </button>
+                                    <!-- Archivo de audio -->
+                                    <audio id="audio" src="/img/Restaurantes Elegante - Musica de Fondo.mp3"></audio>
+                                </div>
                                 <div class="md:hidden" id="hamburger">                        
                                     <i class="ri-menu-2-line cursor-pointer "></i>
                                 </div>
@@ -330,12 +341,10 @@
 
             <!--~~~~~~~~~~~~~~~ Swiper JS ~~~~~~~~~~~~~~~-->
             <!-- Swiper's JS -->
-            <script src="path/to/hammer.min.js"></script>
             <!--~~~~~~~~~~~~~~~ Scroll Reveal ~~~~~~~~~~~~~~~-->
 
     <!--~~~~~~~~~~~~~~~ Main.js ~~~~~~~~~~~~~~~-->
     <script src="main.js"></script>
-    
             
     </body>
 </html>

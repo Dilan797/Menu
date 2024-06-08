@@ -3,6 +3,8 @@ function closeAd() {
     document.getElementById('ad').style.display = 'none';
 }
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
@@ -10,8 +12,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav_link');
     const container = document.querySelector('.container_1');
     const header = document.querySelector('.header-bg');
-    
-    
+    const audio = document.getElementById('audio');
+    const playButton = document.getElementById('playButton');
+    const playIcon = document.getElementById('playIcon');
+
+    // Intentar reproducir el audio al cargar la página
+    function tryPlayAudio() {
+        audio.play().then(() => {
+            playIcon.src = '/img/pausa.png'; // Cambiar a la imagen de stop
+        }).catch(error => {
+            console.log('La reproducción automática fue bloqueada, se requiere interacción del usuario.');
+        });
+    }
+
+    // Intentar reproducir el audio después de una pequeña interacción del usuario
+    function enableAudioAutoplay() {
+        document.removeEventListener('click', enableAudioAutoplay);
+        document.removeEventListener('scroll', enableAudioAutoplay);
+        tryPlayAudio();
+    }
+
+    document.addEventListener('click', enableAudioAutoplay);
+    document.addEventListener('scroll', enableAudioAutoplay);
+
+    // Reproducir/Pausar al hacer clic en el botón
+    playButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play().then(() => {
+                playIcon.src = '/img/pausa.png'; // Cambiar a la imagen de stop
+            }).catch(error => {
+                console.error('Error al reproducir el audio:', error);
+            });
+        } else {
+            audio.pause();
+            playIcon.src = '/img/jugar.png'; // Cambiar a la imagen de play
+        }
+    });
+
     
     // Inicializar la posición de desplazamiento del contenedor
     container.scrollLeft = 0;
@@ -52,17 +89,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Vincular la función toggleMenu con el evento click del botón closeIcon
+     // Vincular la función closeMenu con el evento click del botón closeIcon
     closeIcon.addEventListener('click', function() {
-        toggleMenu();
+        navMenu.classList.remove('active');
+        setTimeout(() => {
+            navMenu.style.display = 'none';
+        }, 300);
     });
-
+    
     // Vincular la función toggleMenu con el evento click de cada navLink
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             toggleMenu();
         });
     });
-
+    
     // Ajustar la visibilidad del menú en el cambio de tamaño de la ventana
     function adjustMenuVisibility() {
         if (window.innerWidth >= 768) {
@@ -104,3 +145,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
