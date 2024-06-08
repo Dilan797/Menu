@@ -710,24 +710,23 @@ main {
 
 @media (max-width: 768px) {
     /* Estilo del botón de cerrar */
-.close-btn {
-    position: absolute;
-    top: -17px;
-    right: 2px;
-    background-color: #ff5c5c;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 18px;
-    line-height: 18px;
-    z-index: 1001; /* Asegúrate de que esté por encima de la imagen */
-}
+    .close-btn {
+        position: absolute;
+        top: -18px;
+        right: -5px;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 18px;
+        z-index: 1001; /* Asegúrate de que esté por encima de la imagen */
+    }
     .ad-image {
         max-width: 100%;
         max-height: 80%;
