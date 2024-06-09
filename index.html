@@ -182,7 +182,10 @@
                             <div class="section-title flex justify-center">
                                 <h2><span class="first-letter-2">F</span>AVORITOS</h2>
                             </div>
-                            <div class="menu-item flex justify-between items-center p-4 bg-white rounded-lg shadow-md">
+                            <div id="favorites-container" class="grid gap-4">
+                                <!-- Favoritos se actualizarán aquí -->
+                            </div>
+                            <!-- <div class="menu-item flex justify-between items-center p-4 bg-white rounded-lg shadow-md">
                                 <div class="item-info">
                                     <h3 class="item-title font-bold text-xl mb-2">GUACAMOLE</h3>
                                     <div class="horizontal-lines">
@@ -233,7 +236,7 @@
                                     <img src="./img/carne.jpg" alt="Guacamole" class="item-image rounded">
                                     
                                 </div>
-                            </div>
+                            </div> -->
                         </div>                    
                         <!-- Menu Entradas -->
                         <!-- Título de la sección que está siendo mostrada -->
@@ -242,52 +245,68 @@
                             <div class="section-title flex justify-center">
                                 <h2><span class="first-letter-2">E</span>NTRADAS</h2>
                             </div>
-                            <div class="menu-item flex justify-between items-center p-4 bg-white rounded-lg shadow-md">
+                            <div class="menu-item flex justify-between items-center p-4 bg-white rounded-lg shadow-md"data-id="1">
                                 <div class="item-info">
                                     <h3 class="item-title font-bold text-xl mb-2">GUACAMOLE</h3>
                                     <div class="horizontal-lines">
                                         <p class="item-description">Avocado, tomato, onion, fresh cilantro, serrano chile, corn chips</p>
                                     </div>
                                     <div class="item-price text-lg font-bold">$9.90</div>
+                                </div>
+                                <div class="like-section flex items-center">
+                                    <i class="far fa-heart like-btn text-2xl mr-2"></i>
+                                    <p class="like-count mt-1"><span>0</span></p>
                                 </div>
                                 <div class="item-image-container relative">
                                     <img src="./img/carne.jpg" alt="Guacamole" class="item-image rounded">
                                     
                                 </div>
                             </div>
-                            <div class="menu-item flex justify-between items-center p-4 bg-white rounded-lg shadow-md">
+                            <div class="menu-item flex justify-between items-center p-4 bg-white rounded-lg shadow-md" data-id="3">
                                 <div class="item-info">
                                     <h3 class="item-title font-bold text-xl mb-2">GUACAMOLE</h3>
                                     <div class="horizontal-lines">
                                         <p class="item-description">Avocado, tomato, onion, fresh cilantro, serrano chile, corn chips</p>
                                     </div>
                                     <div class="item-price text-lg font-bold">$9.90</div>
+                                </div>
+                                <div class="like-section flex items-center">
+                                    <i class="far fa-heart like-btn text-2xl mr-2"></i>
+                                    <p class="like-count mt-1"><span>0</span></p>
                                 </div>
                                 <div class="item-image-container relative">
                                     <img src="./img/carne.jpg" alt="Guacamole" class="item-image rounded">
                                     
                                 </div>
                             </div>
-                            <div class="menu-item flex justify-between items-center p-4 bg-white rounded-lg shadow-md">
+                            <div class="menu-item flex justify-between items-center p-4 bg-white rounded-lg shadow-md"data-id="3">
                                 <div class="item-info">
                                     <h3 class="item-title font-bold text-xl mb-2">GUACAMOLE</h3>
                                     <div class="horizontal-lines">
                                         <p class="item-description">Avocado, tomato, onion, fresh cilantro, serrano chile, corn chips</p>
                                     </div>
                                     <div class="item-price text-lg font-bold">$9.90</div>
+                                </div>
+                                <div class="like-section flex items-center">
+                                    <i class="far fa-heart like-btn text-2xl mr-2"></i>
+                                    <p class="like-count mt-1"><span>0</span></p>
                                 </div>
                                 <div class="item-image-container relative">
                                     <img src="./img/logo_1.png" alt="Guacamole" class="item-image rounded">
                                     
                                 </div>
                             </div>
-                            <div class="menu-item flex justify-between items-center p-4 bg-white rounded-lg shadow-md">
+                            <div class="menu-item flex justify-between items-center p-4 bg-white rounded-lg shadow-md" data-id="4">
                                 <div class="item-info">
                                     <h3 class="item-title font-bold text-xl mb-2">GUACAMOLE</h3>
                                     <div class="horizontal-lines">
                                         <p class="item-description">Avocado, tomato, onion, fresh cilantro, serrano chile, corn chips</p>
                                     </div>
                                     <div class="item-price text-lg font-bold">$9.90</div>
+                                </div>
+                                <div class="like-section flex items-center">
+                                    <i class="far fa-heart like-btn text-2xl mr-2"></i>
+                                    <p class="like-count mt-1"><span>0</span></p>
                                 </div>
                                 <div class="item-image-container relative">
                                     <img src="./img/carne.jpg" alt="Guacamole" class="item-image rounded">
@@ -345,6 +364,6 @@
 
     <!--~~~~~~~~~~~~~~~ Main.js ~~~~~~~~~~~~~~~-->
     <script src="main.js"></script>
-            
+    <script src="likes.js"></script>
     </body>
 </html>

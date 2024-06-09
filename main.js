@@ -3,8 +3,6 @@ function closeAd() {
     document.getElementById('ad').style.display = 'none';
 }
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
@@ -15,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('audio');
     const playButton = document.getElementById('playButton');
     const playIcon = document.getElementById('playIcon');
-
+    
     // Intentar reproducir el audio al cargar la página
     function tryPlayAudio() {
         audio.play().then(() => {
