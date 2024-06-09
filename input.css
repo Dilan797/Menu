@@ -129,6 +129,7 @@ body {
 }
 /* Estilos para pantallas con ancho mayor o igual a 768px (tablets, laptops, desktops) */
 @media (min-width: 900px) {
+    
     #top_menu {
         display: flex !important;
         margin-right: 1.25rem !important; /* Ajusta según sea necesario */
@@ -227,6 +228,7 @@ main {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 1600px) {
+    
     .header-scrolled {
         background-color: rgba(0, 0, 0, 0.95); /* Color de fondo oscuro cuando se hace scroll */
         transition: background-color 1.2s; /* Transición suave del cambio de color */
@@ -647,12 +649,30 @@ main {
     }
     .menu-container .section-title h2 {
     font-size: 3rem;
-    }
-    
+    }  
 }
+
     
 @media (min-width: 1280px) { /* xl: 1280px */
-    
+    /* Seccion de estilo boton  */
+    .like-section {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        right: 150px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .like-btn {
+        cursor: pointer;
+    }
+
+    .like-btn:hover {
+        color: #ff0000; /* Cambia el color cuando se pasa el mouse */
+    }
     .menu-container .section-title h2 {
     font-size: 3.5rem;
     }
@@ -728,24 +748,24 @@ main {
 
 @media (max-width: 768px) {
     /* Seccion de estilo boton  */
-.like-section {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 5px;
-    border-radius: 5px;
-}
+    .like-section {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top:0px;
+        right: 10px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+    }
 
-.like-btn {
-    cursor: pointer;
-}
+    .like-btn {
+        cursor: pointer;
+    }
 
-.like-btn:hover {
-    color: #ff0000; /* Cambia el color cuando se pasa el mouse */
-}
+    .like-btn:hover {
+        color: #ff0000; /* Cambia el color cuando se pasa el mouse */
+    }
     /* Estilo del botón de cerrar */
     .close-btn {
         position: absolute;
@@ -794,12 +814,14 @@ main {
     .item-image-container {
         width: 100px; /* Reducir el tamaño del contenedor de la imagen si es necesario */
         height: auto; /* Ajustar la altura automáticamente */
+        right:-5px;
     }
     
     .item-image {
-        max-width: 100%; /* Para que la imagen sea responsive y no exceda el tamaño de su contenedor */
+        max-width: 97%; /* Para que la imagen sea responsive y no exceda el tamaño de su contenedor */
         height: auto; /* Ajustar la altura automáticamente */
         object-fit: cover; /* Asegurar que la imagen cubra el área sin perder su aspecto */
+        
     }
     
     .add-button {
