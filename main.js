@@ -97,8 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Vincular la función toggleMenu con el evento click de cada navLink
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            toggleMenu();
+        link.addEventListener('click', function(e) {
+            // Si se hace clic en un enlace dentro del menú desplegable, no cerrar el menú
+            if (!link.closest('.dropdown')) {
+                toggleMenu();
+            }
         });
     });
     

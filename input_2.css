@@ -1,0 +1,267 @@
+@media (max-width: 320px){
+    #nav-menu {                
+        z-index: 20; /* Asegúrate de que sea mayor que otros elementos */
+    }
+    .scroll-arrow {
+        position: relative;
+        top:235px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 40;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .left-arrow {
+        position: absolute;
+        left: -5px;
+    }
+    
+    .right-arrow {
+        right: -1px;
+        
+    }
+    .menu-container {
+        top:10px;
+        display: none;
+        flex-direction: column;
+        align-items: center; /* Centrar los items horizontalmente */
+        width: 112%; /* Ajustar al ancho de la pantalla */
+        transform: translateX(2px);
+    }
+    
+    .menu-item {
+        box-sizing: border-box; /* Asegurar que padding y border estén incluidos en el ancho total */
+        width: 100%; /* Para que ocupe el ancho total del contenedor */
+        transform: translateX(-3px);
+        margin: 0.5rem auto; /* Margen superior e inferior y centrado horizontal */
+        padding: 1rem; /* Espacio interno */
+    }
+    
+    .item-title, .item-description, .item-price {
+        font-size: 0.7rem; /* Reduce el tamaño del texto */
+    }
+    
+    .item-image-container {
+        width: 100px; /* Reducir el tamaño del contenedor de la imagen si es necesario */
+        height: auto; /* Ajustar la altura automáticamente */
+    }
+    
+    .item-image {
+        max-width: 100%; /* Para que la imagen sea responsive y no exceda el tamaño de su contenedor */
+        height: auto; /* Ajustar la altura automáticamente */
+        object-fit: cover; /* Asegurar que la imagen cubra el área sin perder su aspecto */
+    }    
+
+}
+@media(min-width: 320px){    
+    #nav-menu {                
+        z-index: 200; /* Asegúrate de que sea mayor que otros elementos */
+    }
+    
+    .scroll-arrow {
+        position: absolute;        
+        transform: translateY(-50%);
+        cursor: pointer;
+        top:235px;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .left-arrow {
+        
+        left: 15px;
+    }
+    
+    .right-arrow {
+        right: 15px;        
+    }
+    
+}
+@media(min-width: 360px){
+    #hamburger {                
+        z-index: 100; /* Asegúrate de que sea mayor que otros elementos */
+    
+    }
+    .scroll-arrow {
+        position: absolute;  
+        top:235px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 40;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .left-arrow {
+        
+        left: 15px;
+    }
+    
+    .right-arrow {
+        right: 15px;        
+    }
+    #nav-menu {
+        max-height: 95vh; /* Limitar la altura máxima a la altura de la vista */
+        overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
+        height:450px;
+    }
+}
+
+@media (min-width: 375px) {
+    
+    .scroll-arrow {
+        position: absolute;  
+        top:235px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .left-arrow {
+        
+        left: 15px;
+    }
+    
+    .right-arrow {
+        right: 15px;        
+    }
+    #nav-menu {
+        max-height: 100vh; /* Limitar la altura máxima a la altura de la vista */
+        overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
+    }
+
+    .dropdown-menu {
+        position: static; /* Cambiar la posición a estática */
+        box-shadow: none; /* Eliminar la sombra */
+        margin-bottom: 0; /* Asegúrate de que no haya margen adicional */
+    }    
+
+    .dropdown-menu li {
+        padding: 5px 0; /* Espacio arriba y abajo */
+        margin: 0; /* Asegúrate de que no haya margen */
+    }
+
+    .dropdown-menu li a {
+        padding: 8px 16px; /* Ajustar padding para subir el texto */
+    }
+
+    .icono {
+        margin-top: 5px; /* Ajustar margen superior para las íconos */
+        //padding: -12px; /* Ajustar padding si es necesario */
+
+    }
+
+    .horario-texto {
+        margin-top:12px; /* Eliminar margen superior adicional */
+        //padding: -18px; /* Ajustar padding si es necesario */
+    }
+}
+@media (min-width: 390px) {
+    #nav-menu {
+        max-height: 87vh; /* Limitar la altura máxima a la altura de la vista */
+        overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
+        
+    }
+
+    .dropdown-menu {
+        position: static; /* Cambiar la posición a estática */
+        box-shadow: none; /* Eliminar la sombra */
+        margin-bottom: 0; /* Asegúrate de que no haya margen adicional */
+    }    
+
+    .dropdown-menu li {
+        padding: 5px 0; /* Espacio arriba y abajo */
+        margin: 0; /* Asegúrate de que no haya margen */
+    }
+
+    .dropdown-menu li a {
+        padding: 8px 16px; /* Ajustar padding para subir el texto */
+    }
+
+    .icono {
+        margin-top: 10px; /* Ajustar margen superior para las íconos */
+        //padding: -12px; /* Ajustar padding si es necesario */
+
+    }
+
+    .horario-texto {
+        margin-top:20px; /* Eliminar margen superior adicional */
+        //padding: -18px; /* Ajustar padding si es necesario */
+    }
+}
+@media (min-width: 400px) {
+    #nav-menu {
+        max-height: 99vh; /* Limitar la altura máxima a la altura de la vista */
+        overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
+        height:450px;
+    }
+
+    .dropdown-menu {
+        position: static; /* Cambiar la posición a estática */
+        box-shadow: none; /* Eliminar la sombra */
+        margin-bottom: 0; /* Asegúrate de que no haya margen adicional */
+    }    
+
+    .dropdown-menu li {
+        padding: 5px 0; /* Espacio arriba y abajo */
+        margin: 0; /* Asegúrate de que no haya margen */
+    }
+
+    .dropdown-menu li a {
+        padding: 8px 16px; /* Ajustar padding para subir el texto */
+    }
+
+    .icono {
+        margin-top: 10px; /* Ajustar margen superior para las íconos */
+        //padding: -12px; /* Ajustar padding si es necesario */
+
+    }
+
+    .horario-texto {
+        margin-top:20px; /* Eliminar margen superior adicional */
+        //padding: -18px; /* Ajustar padding si es necesario */
+    }
+}
+@media (min-width: 412px) {
+    #nav-menu {
+        max-height: 80vh; /* Limitar la altura máxima a la altura de la vista */
+        overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
+        height:450px;
+    }
+}
+@media (min-width: 414px) {
+    #nav-menu {
+        max-height: 80vh; /* Limitar la altura máxima a la altura de la vista */
+        overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
+        height:450px;
+    }
+
+    .dropdown-menu {
+        position: static; /* Cambiar la posición a estática */
+        box-shadow: none; /* Eliminar la sombra */
+        margin-bottom: 0; /* Asegúrate de que no haya margen adicional */
+    }    
+
+    .dropdown-menu li {
+        padding: 5px 0; /* Espacio arriba y abajo */
+        margin: 0; /* Asegúrate de que no haya margen */
+    }
+
+    .dropdown-menu li a {
+        padding: 8px 16px; /* Ajustar padding para subir el texto */
+    }
+
+    .icono {
+        //margin-top: 10px; /* Ajustar margen superior para las íconos */
+        //padding: -12px; /* Ajustar padding si es necesario */
+
+    }
+
+    .horario-texto {
+        margin-top:20px; /* Eliminar margen superior adicional */
+        //padding: -18px; /* Ajustar padding si es necesario */
+    }
+}
