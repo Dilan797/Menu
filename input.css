@@ -135,8 +135,7 @@ body {
         margin-right: 1.25rem !important; /* Ajusta según sea necesario */
     }
     #nav-menu {        
-        display: none !important;
-        
+        display: none !important;        
     }
     #hamburger {
         display: none; /* Ocultamos el menú hamburguesa */                       
@@ -161,8 +160,8 @@ body {
     width:230px;
     border-top: 10px solid black; /* Añade una línea negra en la parte superior */
     overflow: visible;
-    
-    //max-height: 80vh; /* Para asegurar que no se salga de la pantalla */
+        
+    max-height: 80vh; /* Para asegurar que no se salga de la pantalla */
     padding-top: 120px; 
     background-color: rgba(0, 0, 0, 0.98);
     border: 2px solid black; /* Agrega un borde negro de 2px */
@@ -207,6 +206,7 @@ body {
     color: white; /* Color blanco para el ícono de cierre */
     /* Añade :hover si deseas un color diferente al pasar el mouse */
 }
+
 .horario-texto {
     margin-top:39px;
     padding:10px;
