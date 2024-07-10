@@ -133,7 +133,7 @@
 }
 
 @media (min-width: 375px) {
-    
+        
     .scroll-arrow {
         position: absolute;  
         top:235px;
@@ -167,8 +167,6 @@
         margin-top: -10px; /* Ajusta este valor según sea necesario */
         padding-top: 0; /* Asegúrate de eliminar cualquier relleno superior adicional */
     }
-}
-
     .dropdown-menu {
         position: static; /* Cambiar la posición a estática */
         box-shadow: none; /* Eliminar la sombra */

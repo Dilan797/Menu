@@ -720,16 +720,11 @@ video {
   text-transform: uppercase;
 }
 
-.logo {
-  
-  width: 60px;
-  height: auto;
-}
+
 
 @layer {
   body {
-    --tw-bg-opacity: 1;
-    /* background-color: rgb(220 38 38 / var(--tw-bg-opacity)); */
+    --tw-bg-opacity: 1;    
     font-family: Playfair Display, serif;
     font-weight: 700;
     letter-spacing: 0.05em;
