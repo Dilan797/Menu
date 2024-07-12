@@ -303,19 +303,21 @@ main {
 .logo {
     //height: 100px;
     position: absolute;
-    top: -40px;
+    top: -350px;
     left: 50%;
-    width:800px;
-    max-width:100%;
+    width:100%;
+    max-width:800px;
     transform: translateX(-50%);
     margin: 0 auto; /* Centra el logo horizontalmente */
     //z-index: 500;
 }
 .logo-container-wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    //align-items: flex-start; /* Asegura que el logo comience desde la parte superior */
 }
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 1600px) {
     
@@ -836,17 +838,39 @@ main {
     }
     
 }
-@media (max-width: 584px) {
-    .logo {
-        //height: 100px;
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        //width:800px;
-        //max-width:100%;
-        transform: translateX(-50%);
-        //z-index: 500;
+
+@media screen and (max-width: 584px) {
+    .logo{
+        
+    height: 500px;
+    position: absolute;
+    top: -380px;
+    left: 50%;
+    width:100%;
+    max-width:800px;
+    transform: translateX(-50%);
+    margin: 0 auto; /* Centra el logo horizontalmente */
+    //z-index: 500;
     }
+    .logo-container-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        //align-items: flex-start; /* Asegura que el logo comience desde la parte superior */
+    }
+}
+.swiper-container {
+    display: none; /* Oculta el carrusel por defecto */
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto; /* Ajusta el margen para separarlo de los bordes */
+    position: relative;
+    z-index: 400;
+}
+
+.swiper-slide img {
+    width: 100%;
+    border-radius: 10px; /* Añade bordes redondeados si lo deseas */
 }
 @media (max-width: 768px) {
     .social-icons {        
@@ -961,5 +985,5 @@ main {
         font-weight: 700; /* Grosor de la primera letra */
         
     }   
-
+    
 }
