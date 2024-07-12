@@ -234,6 +234,7 @@ body {
 }
 main {
     padding-top: 290px; /* Ajusta este valor según la altura real de tu header */
+    
 }
 //Estilo para mover a la derercha SEDES
 
@@ -300,22 +301,21 @@ main {
     margin-left: 10px;
 }
 .logo {
-    position:absolute;
-    
+    //height: 100px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    width:800px;
+    max-width:100%;
+    transform: translateX(-50%);
+    margin: 0 auto; /* Centra el logo horizontalmente */
+    //z-index: 500;
 }
-@media (min-width: 1600px) {
-    
-    .logo {
-        //position:absolute;
-        top: -35px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 680px;
-        height: auto;  
-        z-index: 100;   
-    }
+.logo-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 /* Estilos para dispositivos móviles */
 @media (max-width: 1600px) {
     
@@ -330,9 +330,7 @@ main {
         
     }
     
-    .main {
-        padding-top: 290px; /* O el valor que se ajuste a la altura del logo */
-    }
+    
     .nav_link {
         display: block; /* Asegúrate de que cada enlace sea un bloque para permitir el subrayado en toda la anchura */
         color: white; /* Color inicial del texto */
@@ -379,11 +377,12 @@ main {
     }
     
     
+    
 }
 
 /* Estilos de las categorias, incluido el tamños de el contenedor de mis articulos */
 #category {
-    margin-top: 105px;
+    margin-top: 110px;
     padding:1.25rem; /* Ajusta esto según tus necesidades */
     margin-bottom: 32px;
     padding-left: 0.8%;
@@ -722,12 +721,7 @@ main {
 }
     
 @media (min-width: 768px) { /* md: 768px */
-    #nav-menu {
-        max-height: 80vh; /* Limitar la altura máxima a la altura de la vista */
-        overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
-        height:450px;
-    }
-
+    
     .menu-container .section-title {
         margin-top: 10px; /* Ajusta para pantallas medianas si es necesario */
     }
@@ -735,6 +729,7 @@ main {
         font-size: 2.5rem;
     } 
     
+
     
 }
     
@@ -841,7 +836,18 @@ main {
     }
     
 }
-
+@media (max-width: 584px) {
+    .logo {
+        //height: 100px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        //width:800px;
+        //max-width:100%;
+        transform: translateX(-50%);
+        //z-index: 500;
+    }
+}
 @media (max-width: 768px) {
     .social-icons {        
         display: flex;
@@ -954,6 +960,6 @@ main {
         font-size: 1.9rem; /* Tamaño de la primera letra */
         font-weight: 700; /* Grosor de la primera letra */
         
-    }
-    
+    }   
+
 }

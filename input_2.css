@@ -1,6 +1,33 @@
 @media (max-width: 320px){
-    #nav-menu {                
-        z-index: 20; /* Asegúrate de que sea mayor que otros elementos */
+    #nav-menu {
+        max-height: 100vh; /* Limitar la altura máxima a la altura de la vista */
+        //overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
+    }
+
+    .dropdown-menu {
+        position: static; /* Cambiar la posición a estática */
+        box-shadow: none; /* Eliminar la sombra */
+        margin-bottom: 0; /* Asegúrate de que no haya margen adicional */
+    }    
+
+    .dropdown-menu li {
+        padding: 5px 0; /* Espacio arriba y abajo */
+        margin: 0; /* Asegúrate de que no haya margen */
+    }
+
+    .dropdown-menu li a {
+        padding: 8px 16px; /* Ajustar padding para subir el texto */
+    }
+
+    .icono {
+        margin-top: 2px; /* Ajustar margen superior para las íconos */
+        //padding: -12px; /* Ajustar padding si es necesario */
+
+    }
+
+    .horario-texto {
+        margin-top:1px; /* Eliminar margen superior adicional */
+        //padding: -18px; /* Ajustar padding si es necesario */
     }
     .scroll-arrow {
         position: relative;
@@ -57,6 +84,7 @@
 @media(min-width: 320px){    
     #nav-menu {                
         z-index: 200; /* Asegúrate de que sea mayor que otros elementos */
+        max-width:;
     }
     
     .scroll-arrow {
@@ -195,8 +223,8 @@
 }
 @media (min-width: 390px) {
     #nav-menu {
-        max-height: 87vh; /* Limitar la altura máxima a la altura de la vista */
-        overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
+        max-height: 100vh; /* Limitar la altura máxima a la altura de la vista */
+        //overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
         
     }
 
@@ -216,13 +244,13 @@
     }
 
     .icono {
-        margin-top: 10px; /* Ajustar margen superior para las íconos */
+        margin-top: 2px; /* Ajustar margen superior para las íconos */
         //padding: -12px; /* Ajustar padding si es necesario */
 
     }
 
     .horario-texto {
-        margin-top:20px; /* Eliminar margen superior adicional */
+        margin-top:10px; /* Eliminar margen superior adicional */
         //padding: -18px; /* Ajustar padding si es necesario */
     }
 }
@@ -258,11 +286,12 @@
         margin-top:20px; /* Eliminar margen superior adicional */
         //padding: -18px; /* Ajustar padding si es necesario */
     }
+    
 }
 
 @media (min-width: 414px) {
     #nav-menu {
-        max-height: 80vh; /* Limitar la altura máxima a la altura de la vista */
+        max-height: 94vh; /* Limitar la altura máxima a la altura de la vista */
         //overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
         height:450px;
     }
@@ -293,17 +322,24 @@
         //padding: -18px; /* Ajustar padding si es necesario */
     }
 }
-@media (min-width: 412px) {
+@media (min-width: 480px) {
     #nav-menu {
-        max-height: 93vh; /* Limitar la altura máxima a la altura de la vista */
+        max-height: 80vh; /* Limitar la altura máxima a la altura de la vista */
         //overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
-        //height:450px;
+        height:450px;
     }
-}
-@media (min-width: 393px) {
-    #nav-menu {
-        max-height: 95vh; /* Limitar la altura máxima a la altura de la vista */
-        //overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
-        //height:450px;
+    .icono {
+        margin-top: 1px; /* Ajustar margen superior para las íconos */
+        //padding: -12px; /* Ajustar padding si es necesario */
+        
     }
+    
+    .horario-texto {
+        margin-top:1px; /* Eliminar margen superior adicional */
+        //padding: -18px; /* Ajustar padding si es necesario */
+    }
+
+    
+
 }
+//Estilos logo
