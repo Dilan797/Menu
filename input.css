@@ -914,7 +914,7 @@ main {
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 50%;
+    top: 46%;
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
@@ -941,11 +941,25 @@ main {
     .carousel-container {
         display: none;
     }
-}
-@media (max-width: 584px) {
-    .logo {
+    .logo-container {
         display: none;
     }
+    
+}
+@media (max-width: 584px) {
+
+    .logo-container {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    
+      /* Ajusta el tamaño del logo si es necesario */
+    .logo-container img {
+        height: 2rem; /* o el tamaño que prefieras */
+    }
+    .logo {
+        display: none;
+    }    
     .carousel-container {
         margin-top: 60px; /* Ajusta según el tamaño de tu menú */
     }
