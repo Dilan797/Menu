@@ -25,6 +25,8 @@
             <link href="./input.css" rel="stylesheet" />
             <!--~~~~~~~~~~~~~~~ Input_2 CSS ~~~~~~~~~~~~~~~-->
             <link href="./input_2.css" rel="stylesheet" />
+            <!-- Libreria Bootstrap -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
 
             <title>responsive || burger website</title>
         </head>         
@@ -39,15 +41,35 @@
                 </div>
             </div>
             <!-- Carrusel para pantallas pequeñas -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Cada una de estas div será una slide del carrusel -->
-                    <div class="swiper-slide"><img src="ruta_de_tu_imagen_1.jpg" alt="Imagen 1"></div>
-                    <div class="swiper-slide"><img src="ruta_de_tu_imagen_2.jpg" alt="Imagen 2"></div>
-                    <div class="swiper-slide"><img src="ruta_de_tu_imagen_3.jpg" alt="Imagen 3"></div>
-                </div>
-                
-            </div>
+            <div class="carousel-container">
+                <div class="carousel" id="myCarousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="img/carne.jpg" alt="Imagen 1">
+                        <div class="carousel-caption">
+                            <h3>Titulo 1</h3>
+                            <p>Descripción 1</p>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                        <img src="img/logo_1.png" alt="Imagen 2">
+                        <div class="carousel-caption">
+                            <h3>Titulo 2</h3>
+                            <p>Descripción 2</p>
+                        </div>
+                    </div>
+                    <!-- Añada más items según sea necesario -->
+                    </div>
+                        <button class="carousel-control-prev" type="button">
+                        <span class="carousel-control-prev-icon" aria-hidden="true">&lt;</span>
+                        </button>
+                        <button class="carousel-control-next" type="button">
+                        <span class="carousel-control-next-icon" aria-hidden="true">&gt;</span>
+                        </button>
+                    </div>
+                </div>       
+
+            
             <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
             <section id="Inicio">
             
@@ -465,5 +487,10 @@
     <script src="likes.js"></script>
     <script src="dropdown.js"></script>
     <script src="animation.js"></script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     </body>
 </html>

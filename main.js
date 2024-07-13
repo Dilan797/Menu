@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function scrollRight() {
         container.scrollBy({ left: 100, behavior: 'smooth' });
     }
+    
 
     document.querySelector('.left-arrow').addEventListener('click', scrollLeft);
     document.querySelector('.right-arrow').addEventListener('click', scrollRight);
